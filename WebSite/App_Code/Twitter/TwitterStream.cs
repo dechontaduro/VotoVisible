@@ -15,7 +15,6 @@ using log4net;
 public static class TwitterStream
 {
     private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
     #region Rate-Limit
     /// <summary>
     /// Enable you to Get all information from Token and how many query you can execute
@@ -33,12 +32,12 @@ public static class TwitterStream
     #endregion
 
     // Track Keywords
-    private static void StreamFilterBasicTrackExample(IToken token)
+    private static void StreamFilterBasicTrackExample(IToken token, string hashtag)
     {
         IFilteredStream stream = new FilteredStream();
 
         stream.StreamStarted += (sender, args) => { Console.WriteLine("Stream has started!"); if (log.IsDebugEnabled) log.DebugFormat("Stream has started!"); };
-        stream.AddTrack("#Vo_aV");
+        stream.AddTrack(hashtag);
 
         stream.LimitReached += (sender, args) =>
         {
@@ -50,6 +49,8 @@ public static class TwitterStream
         if (!context.TryInvokeAction(() => stream.StartStream(token, tweet => 
                 {
                     if (log.IsDebugEnabled) log.DebugFormat("Tweet:{0}", tweet);
+                    //TODO: Función delegada
+                    com.VotoVisible.Manager.Tweet.add(tweet);
                     Console.WriteLine(tweet);
                 }
             )))
@@ -70,7 +71,7 @@ public static class TwitterStream
 
         TokenSingleton.Token = token;
         //GetRateLimit(token);
-        StreamFilterBasicTrackExample(token);
+        StreamFilterBasicTrackExample(token, "#Vo_aV");
     }
     
 }
