@@ -33,7 +33,17 @@ namespace com.VotoVisible.Utils
             return (DateTime)value;
         }
 
+        public static DateTime? Str2DateTime(string value, string format)
+        {
+            DateTime fecha;
+            if (!DateTime.TryParseExact(value, format
+                    , System.Globalization.CultureInfo.InvariantCulture
+                    , System.Globalization.DateTimeStyles.None
+                    , out fecha))
+                return null;
 
+            return fecha;
+        }
 
         //http://en.wikipedia.org/wiki/Base_36#C_implementation
         private const string Clist = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";

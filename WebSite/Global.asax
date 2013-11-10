@@ -5,11 +5,28 @@
 
     void Application_Start(object sender, EventArgs e) 
     {
-        log4net.Config.XmlConfigurator.Configure(); 
+        log4net.Config.XmlConfigurator.Configure();
+        
+        System.Threading.Thread threadTwitterStream = new System.Threading.Thread(TwitterStream.start);
+        threadTwitterStream.IsBackground = true;
+        threadTwitterStream.Start();
+        Application["threadTwitterStream"] = threadTwitterStream;
     }
     
     void Application_End(object sender, EventArgs e) 
     {
+        try
+        {
+            System.Threading.Thread threadTwitterStream = (System.Threading.Thread)Application["threadTwitterStream"];
+            if (threadTwitterStream != null && threadTwitterStream.IsAlive == true)
+            {
+                threadTwitterStream.Abort();
+            }
+        }
+        catch
+        {
+            ///
+        }
     }
         
     void Application_Error(object sender, EventArgs e) 

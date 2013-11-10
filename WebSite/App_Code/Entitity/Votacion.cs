@@ -8,21 +8,8 @@ namespace com.VotoVisible.Entitity
     /// </summary>
     public class Votacion
     {
-        public int Id
-        {
-            get{ return id;}
-            set{id = value;}
-        }
-
-        public string Corporacion
-        {
-            get { 
-                return corporacion; 
-            }
-            set { corporacion = value; }
-        }
-
         public int id;
+        public int tipo;
         public string corporacion;
         public string titulo;
         public string numero;
@@ -38,7 +25,8 @@ namespace com.VotoVisible.Entitity
         public Voto mostReply;
 
         public Votacion() { }
-        public Votacion(int id, 
+        public Votacion(int id,
+                        int tipo,
                         string corporacion,
                         string titulo,
                         string numero,
@@ -50,6 +38,7 @@ namespace com.VotoVisible.Entitity
                         DateTime? finalizado)
         {
             this.id = id;
+            this.tipo = tipo;
             this.corporacion = corporacion;
             this.titulo = titulo;
             this.numero = numero;

@@ -19,6 +19,7 @@ namespace com.VotoVisible.Manager
         {
             com.VotoVisible.Entitity.Votacion obj = new Entitity.Votacion(
                 (int)Conversion.Obj2Int(votacion["votaId"]),
+                (int)Conversion.Obj2Int(votacion["votaTipo"]),
                 Conversion.Obj2String(votacion["votaCorporacion"]),
                 Conversion.Obj2String(votacion["votaTitulo"]),
                 Conversion.Obj2String(votacion["votaNumero"]),
@@ -33,8 +34,8 @@ namespace com.VotoVisible.Manager
 
         public static Entitity.Votacion getById(string id)
         {
-            string sql = 
-                @"SELECT votaId, votaCorporacion, votaTitulo, votaNumero, votaAnio, votaURL
+            string sql =
+                @"SELECT votaId, votaTipo, votaCorporacion, votaTitulo, votaNumero, votaAnio, votaURL
 	                , twitterAccount, tweetId
 	                , votaCreado, votaFinalizado
                 FROM votacion
@@ -53,7 +54,7 @@ namespace com.VotoVisible.Manager
         public static List<Entitity.Votacion> getAll(int records)
         {
             string sql =
-                @"SELECT TOP (@top) votaId, votaCorporacion, votaTitulo, votaNumero, votaAnio, votaURL
+                @"SELECT TOP (@top) votaId, votaTipo, votaCorporacion, votaTitulo, votaNumero, votaAnio, votaURL
 	                , twitterAccount, tweetId
 	                , votaCreado, votaFinalizado
                 FROM votacion
@@ -96,6 +97,37 @@ namespace com.VotoVisible.Manager
                 lst.Add(convert2Votacion(dr));
 
             return lst;
+        }
+
+        public static string add(Entitity.Votacion votacion)
+        {
+            string sql =
+                @"INSERT INTO votacion
+                    (votaTipo,votaCorporacion,votaTitulo,votaNumero,votaAnio,votaURL
+                        ,twitterAccount,tweetId,votaCreado,votaFinalizado)
+                VALUES
+                    (@votaTipo,@votaCorporacion,@votaTitulo,@votaNumero,@votaAnio,@votaURL
+                        ,@twitterAccount,@tweetId,@votaCreado,@votaFinalizado)
+
+                SELECT @@IDENTITY";
+
+            GenericProvider gp = new GenericProvider("default");
+            object result = gp.GetScalar(sql, CommandType.Text
+                                , gp.GetDBParameter("@votaTipo", votacion.tipo)
+                                , gp.GetDBParameter("@votaCorporacion", votacion.corporacion)
+                                , gp.GetDBParameter("@votaTitulo", votacion.titulo)
+                                , gp.GetDBParameter("@votaNumero", votacion.numero)
+                                , gp.GetDBParameter("@votaAnio", votacion.anio)
+                                , gp.GetDBParameter("@votaURL", votacion.url)
+                                , gp.GetDBParameter("@twitterAccount", votacion.twitterAccount)
+                                , gp.GetDBParameter("@tweetId", votacion.tweetId)
+                                , gp.GetDBParameter("@votaCreado", votacion.creado)
+                                , gp.GetDBParameter("@votaFinalizado", votacion.finalizado));
+
+            if (result == null)
+                return "";
+
+            return result.ToString();
         }
     }
 }

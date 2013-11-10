@@ -7,7 +7,7 @@ namespace com.VotoVisible.Entitity
     /// </summary>
     public class Voto
     {
-        public int Id;
+        public int? id;
         public int votacionId;
         public string twitterAccount;
         public int? tipo;
@@ -20,7 +20,8 @@ namespace com.VotoVisible.Entitity
         public DateTime? creado;
         public DateTime? realizado;
 
-        public Voto(int Id,
+        public Voto() { }
+        public Voto(int? id,
                     int votacionId,
                     string twitterAccount,
                     int? tipo,
@@ -33,7 +34,7 @@ namespace com.VotoVisible.Entitity
                     DateTime? creado,
                     DateTime? realizado)
         {
-            this.Id = Id;
+            this.id = id;
             this.votacionId = votacionId;
             this.twitterAccount = twitterAccount;
             this.tipo = tipo;
