@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        function drawResultados() {
+            var spaceCircles = [30, 70, 110];
+
+            var svgContainer = d3.select("#svgResultados").append("svg")
+                                                .attr("width", 200)
+                                                .attr("height", 200);
+
+            var circles = svgContainer.selectAll("circle")
+                                      .data(spaceCircles)
+                                      .enter()
+                                      .append("circle");
+
+            var circleAttributes = circles
+                                   .attr("cx", function (d) { return d; })
+                                   .attr("cy", function (d) { return d; })
+                                   .attr("r", 20)
+                                   .style("fill", function (d) {
+                                       var returnColor;
+                                       if (d === 30) {
+                                           returnColor = "green";
+                                       } else if (d === 70) {
+                                           returnColor = "purple";
+                                       } else if (d === 110) { returnColor = "red"; }
+                                       return returnColor;
+                                   });
+        }
+
+
+    </script>
+</head>
+<body  onload="drawResultados();">
+    <div id="svgResultados"></div >
+</body>
+</html>

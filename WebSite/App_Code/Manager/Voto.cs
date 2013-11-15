@@ -92,7 +92,7 @@ namespace com.VotoVisible.Manager
 	                , tweetId, tweet, retweets, replies
 	                , votoCreado, votoRealizado
                 FROM voto
-                WHERE votaId = @votacionId
+                WHERE votaId = @votacionId AND tweetId IS NOT NULL
                 ORDER BY ISNULL(retweets, 0) DESC";
 
             GenericProvider gp = new GenericProvider("default");
@@ -112,7 +112,7 @@ namespace com.VotoVisible.Manager
 	                , tweetId, tweet, retweets, replies
 	                , votoCreado, votoRealizado
                 FROM voto
-                WHERE votaId = @votacionId
+                WHERE votaId = @votacionId AND tweetId IS NOT NULL
                 ORDER BY ISNULL(replies, 0) DESC";
 
             GenericProvider gp = new GenericProvider("default");
@@ -132,6 +132,7 @@ namespace com.VotoVisible.Manager
 	                , tweetId, tweet, retweets, replies
 	                , votoCreado, votoRealizado
                 FROM voto
+                WHERE tweetId IS NOT NULL
                 ORDER BY NEWID()";
 
             GenericProvider gp = new GenericProvider("default");
@@ -151,8 +152,9 @@ namespace com.VotoVisible.Manager
 	                , SUM(CASE WHEN votoTipo = 0 THEN 1 ELSE 0 END) Publico
 	                , SUM(CASE WHEN votoTipo = 1 THEN 1 ELSE 0 END) Privado
                 FROM voto
-                WHERE votaId = @votacionId
-                GROUP BY votoDecision";
+                WHERE votaId = @votacionId AND votoDecision IS NOT NULL
+                GROUP BY votoDecision
+                ORDER BY SUM(CASE WHEN votoTipo = 0 THEN 1 ELSE 0 END)+SUM(CASE WHEN votoTipo = 1 THEN 1 ELSE 0 END) DESC ";
 
             GenericProvider gp = new GenericProvider("default");
             DataTable dt = gp.GetTable(sql, CommandType.Text, gp.GetDBParameter("@votacionId", votacionId));

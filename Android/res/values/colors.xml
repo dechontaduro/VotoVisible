@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<resources>
+  <color name="contents_text">#ff000000</color>
+  <color name="encode_view">#ffffffff</color>
+  <color name="help_button_view">#ffcccccc</color>
+  <color name="help_view">#ff404040</color>
+  <color name="possible_result_points">#c0ffff00</color>
+  <color name="result_image_border">#ffffffff</color>
+  <color name="result_minor_text">#ffc0c0c0</color>
+  <color name="result_points">#c000ff00</color>
+  <color name="result_text">#ffffffff</color>
+  <color name="result_view">#b0000000</color>
+  <color name="sbc_header_text">#ff808080</color>
+  <color name="sbc_header_view">#ffffffff</color>
+  <color name="sbc_list_item">#fffff0e0</color>
+  <color name="sbc_layout_view">#ffffffff</color>
+  <color name="sbc_page_number_text">#ff000000</color>
+  <color name="sbc_snippet_text">#ff4b4b4b</color>
+  <color name="share_text">#ff000000</color>
+  <color name="status_text">#ffffffff</color>
+  <color name="transparent">#00000000</color>
+  <color name="viewfinder_frame">#ff000000</color>
+  <color name="viewfinder_laser">#ffff0000</color>
+  <color name="viewfinder_mask">#60000000</color>
+    <color name="header_pqrreg">#80111111</color>
+    <color name="fondo1MisPqr">#ffd0f0ff</color>
+    <color name="fondo2MisPqr">#ff879cff</color>
+    <color name="fondo3MisPqr">#fff7ff87</color>
+    <color name="fondo4MisPqr">#fffeff7b</color>
+
+    <color name="fondo_footer_start">#803aa5f5</color>
+    <color name="fondo_footer_end">#80215cf5</color>
+
+    <color name="fondo_start_edttexto">#ffffff</color>
+    <color name="fondo_end_edttexto">#ffd7d7d7</color>
+
+    <color name="ftwiter1">#27B6F2</color>
+    <color name="ftwiter2">#ff279fd7</color>
+
+    <color name="twTexto">#ffc5cdff</color>
+    <color name="twTexto2">#ffadb5e7</color>
+
+    <color name="twfondo">#ffeef2ff</color>
+
+    <color name="bar_theme_pressed_start">#80111111</color>
+<color name="bar_theme_pressed_end">#80000000</color>
+
+<color name="bar_theme_released_start">#7DCECA</color>
+<color name="bar_theme_released_end">#2FB0AB</color>
+<color name="jgb_pressed_end">#FF0007DD</color>
+
+
+<color name="volver_pressed_start">#80C3BE</color>
+<color name="volver_pressed_end">#FF343434</color>
+<color name="volver_released_start">#80C3BE</color>
+<color name="volver_released_end">#3F343434</color>
+
+<color name="tarea_released_start">#FF0F4DA8</color>
+<color name="tarea_released_end">#3F0F4DA8</color>
+<color name="tarea_pressed_start">#3F0F4DA8</color>
+<color name="tarea_pressed_end">#FF0F4DA8</color>
+
+<color name="mensaje_released_start">#FF757575</color>
+<color name="mensaje_released_end">#3F757575</color>
+<color name="mensaje_pressed_start">#3F757575</color>
+<color name="mensaje_pressed_end">#FF757575</color>
+
+
+<color name="transparente">#FFFFFFFF</color>
+<color name="mensaje_no_leido">#FF3F0000</color>
+<color name="black_overlay">#66000000</color>
+
+
+<color name="cliente_pressed_start">#3F2F6699</color>
+<color name="cliente_pressed_end">#FF2F6699</color>
+<color name="cliente_released_start">#FF2F6699</color>
+<color name="cliente_released_end">#3F2F6699</color>
+
+<color name="cliente_pendiente_pressed_start">#3FFF9900</color>
+<color name="cliente_pendiente_pressed_end">#FFFF9900</color>
+<color name="cliente_pendiente_released_start">#FFFF9900</color>
+<color name="cliente_pendiente_released_end">#3FFF9900</color>
+
+
+<color name="cliente_pendiente_terminado_pressed_start">#3FFF0000</color>
+<color name="cliente_pendiente_terminado_pressed_end">#FFFF0000</color>
+<color name="cliente_pendiente_terminado_released_start">#FFFF0000</color>
+<color name="cliente_pendiente_terminado_released_end">#3FFF0000</color>
+
+<color name="cliente_terminado_pressed_start">#3F00FF00</color>
+<color name="cliente_terminado_pressed_end">#ff23ff00</color>
+<color name="cliente_terminado_released_start">#FF00FF00</color>
+<color name="cliente_terminado_released_end">#3F00FF00</color>
+
+<color name="bordeBoton">#405C5A</color>
+
+<color name="btn_ingresar_release_start">#2DB0AA</color>
+<color name="btn_ingresar_release_end">#2C9A93</color>
+<color name="btn_ingresar_pressed_start">#51CBC5</color>
+<color name="btn_ingresar_pressed_end">#70E6E1</color>
+
+<color name="btn_header_release_start">#87C7C3</color>
+<color name="btn_header_release_end">#3EC6C0</color>
+<color name="btn_header_pressed_start">#51CBC5</color>
+<color name="btn_header_pressed_end">#70E6E1</color>
+
+<color name="btn_pqr_release_start">#2EB1AB</color>
+<color name="blanco">#ffffffff</color>
+
+</resources>

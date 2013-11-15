@@ -1,0 +1,11 @@
+<resources>
+    <style name="textoEncabezado">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

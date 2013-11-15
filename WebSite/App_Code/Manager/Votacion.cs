@@ -78,7 +78,7 @@ namespace com.VotoVisible.Manager
         {
             string sql =
                 @"SELECT DISTINCT 
-                    0 votaId
+                    0 votaId, 0 votaTipo
                     , votaCorporacion
                     , '' votaTitulo, '' votaNumero, '' votaAnio, '' votaURL
 	                , '' twitterAccount, '' tweetId, null votaCreado, null votaFinalizado

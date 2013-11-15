@@ -16,7 +16,9 @@ namespace com.VotoVisible.Utils
         {
             if (value == null || value == System.DBNull.Value)
                 return null;
-            return (int?)value;
+
+            int? ivalue = (int?)value;
+            return ivalue;
         }
 
         public static string Obj2String(object value)
