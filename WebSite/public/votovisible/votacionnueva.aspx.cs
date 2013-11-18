@@ -26,12 +26,16 @@ public partial class public_votovisible_votacionnueva : System.Web.UI.Page
             id = com.VotoVisible.Manager.Votacion.add(votacion);
             votid.Text = id;
         }
+        else
+        {
+            votacion.id = int.Parse(id);
+            id = com.VotoVisible.Manager.Votacion.update(votacion);
+        }
 
         votacion.id = int.Parse(id);
-
+        com.VotoVisible.Manager.Voto.delete(votacion.id, true);
         if (votacion.tipo == 0)
         {
-            com.VotoVisible.Manager.Voto.delete(votacion.id, true);
             string[] avotantes = votantes.Text.Split(',');
             foreach (string votante in avotantes)
             {

@@ -64,7 +64,7 @@
 		        <a href="votaciones.aspx" class="list-group-item active">Corporaciones en forma de nube</a>
               <asp:Repeater id="rptCorporaciones" runat="server" DataSource="<%# corporaciones %>">
                 <ItemTemplate>
-                    <a href="votaciones.aspx?c=<%# ((com.VotoVisible.Entitity.Votacion)Container.DataItem).corporacion%>" class="list-group-item"><%# ((com.VotoVisible.Entitity.Votacion)Container.DataItem).corporacion%></a>
+                    <a href="votaciones.aspx?corp=<%# ((com.VotoVisible.Entitity.Votacion)Container.DataItem).corporacion%>" class="list-group-item"><%# ((com.VotoVisible.Entitity.Votacion)Container.DataItem).corporacion%></a>
                 </ItemTemplate>
               </asp:Repeater>
           </div>

@@ -13,14 +13,15 @@ namespace com.VotoVisible.Manager
         {
 
         }
-
-        public static string add(TweetinCore.Interfaces.ITweet tweet)
+        
+        //http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str
+        public static string add(TweetinCore.Interfaces.ITweet tweet, byte[] tweetByte, string tweetStr)
         {
             string sql =
                 @"INSERT INTO tweet
-                    (twAccount,twTweetId,twTweet,twRetweets,twReplies,twCreated,twStatus,twHashtags)
+                    (twAccount,twTweetId,twText,twRetweets,twReplies,twCreated,twStatus,twHashtags,twTweet)
                 VALUES
-                    (@twAccount,@twTweetId,@twTweet,@twRetweets,@twReplies,@twCreated,@twStatus,@twHashtags)
+                    (@twAccount,@twTweetId,@twText,@twRetweets,@twReplies,@twCreated,@twStatus,@twHashtags,@twTweet)
 
                 SELECT @@IDENTITY";
 
@@ -28,12 +29,15 @@ namespace com.VotoVisible.Manager
             object result = gp.GetScalar(sql, CommandType.Text
                                 , gp.GetDBParameter("@twAccount", tweet.Creator.ScreenName)
                                 , gp.GetDBParameter("@twTweetId", tweet.Id)
-                                , gp.GetDBParameter("@twTweet", tweet.Text)
+                                , gp.GetDBParameter("@twText", tweet.Text)
                                 , gp.GetDBParameter("@twRetweets", tweet.RetweetCount)
                                 , gp.GetDBParameter("@twReplies", 0)
                                 , gp.GetDBParameter("@twCreated", tweet.CreatedAt)
                                 , gp.GetDBParameter("@twStatus", 0)
-                                , gp.GetDBParameter("@twHashtags", getHashtagString(tweet.Hashtags)));
+                                , gp.GetDBParameter("@twHashtags", getHashtagString(tweet.Hashtags))
+                                , gp.GetDBParameter("@twTweetBin", tweetByte)
+                                , gp.GetDBParameter("@twTweet", tweetStr)
+                                );
 
             if (result == null)
                 return "";

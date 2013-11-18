@@ -6,8 +6,8 @@
     void Application_Start(object sender, EventArgs e) 
     {
         log4net.Config.XmlConfigurator.Configure();
-        
-        System.Threading.Thread threadTwitterStream = new System.Threading.Thread(TwitterStream.start);
+
+        System.Threading.Thread threadTwitterStream = new System.Threading.Thread(com.VotoVisible.Twitter.Stream.start);
         threadTwitterStream.IsBackground = true;
         threadTwitterStream.Start();
         Application["threadTwitterStream"] = threadTwitterStream;

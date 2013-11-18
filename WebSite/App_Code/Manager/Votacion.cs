@@ -74,6 +74,32 @@ namespace com.VotoVisible.Manager
             return lst;
         }
 
+        public static List<Entitity.Votacion> getByCorporacion(int records, string corporacion)
+        {
+            string sql =
+                @"SELECT TOP (@top) votaId, votaTipo, votaCorporacion, votaTitulo, votaNumero, votaAnio, votaURL
+	                , twitterAccount, tweetId
+	                , votaCreado, votaFinalizado
+                FROM votacion
+                WHERE votaCorporacion = @votaCorporacion
+                ORDER BY votaCreado";
+
+            GenericProvider gp = new GenericProvider("default");
+            DataTable dt = gp.GetTable(sql, CommandType.Text
+                    , gp.GetDBParameter("@top", records)
+                    , gp.GetDBParameter("@votaCorporacion", corporacion));
+
+            List<Entitity.Votacion> lst = new List<Entitity.Votacion>();
+
+            if (dt == null || dt.Rows.Count == 0)
+                return lst;
+
+            foreach (DataRow dr in dt.Rows)
+                lst.Add(convert2Votacion(dr));
+
+            return lst;
+        }
+
         public static List<Entitity.Votacion> getCorporacionesAll()
         {
             string sql =
@@ -128,6 +154,42 @@ namespace com.VotoVisible.Manager
                 return "";
 
             return result.ToString();
+        }
+
+        public static string update(Entitity.Votacion votacion)
+        {
+            string sql =
+                @"UPDATE votacion
+                SET votaTipo = @votaTipo
+                    ,votaCorporacion = @votaCorporacion
+                    ,votaTitulo = @votaTitulo
+                    ,votaNumero = @votaNumero
+                    ,votaAnio = @votaAnio
+                    ,votaURL = @votaURL
+                    ,twitterAccount = @twitterAccount
+                    ,tweetId = @tweetId
+                    ,votaCreado = @votaCreado
+                    ,votaFinalizado = @votaFinalizado
+                WHERE votaId=@votaId";
+
+            GenericProvider gp = new GenericProvider("default");
+            int recs = gp.ExecuteNonQuery(sql, CommandType.Text
+                                , gp.GetDBParameter("@votaId", votacion.id)
+                                , gp.GetDBParameter("@votaTipo", votacion.tipo)
+                                , gp.GetDBParameter("@votaCorporacion", votacion.corporacion)
+                                , gp.GetDBParameter("@votaTitulo", votacion.titulo)
+                                , gp.GetDBParameter("@votaNumero", votacion.numero)
+                                , gp.GetDBParameter("@votaAnio", votacion.anio)
+                                , gp.GetDBParameter("@votaURL", votacion.url)
+                                , gp.GetDBParameter("@twitterAccount", votacion.twitterAccount)
+                                , gp.GetDBParameter("@tweetId", votacion.tweetId)
+                                , gp.GetDBParameter("@votaCreado", votacion.creado)
+                                , gp.GetDBParameter("@votaFinalizado", votacion.finalizado));
+
+            if (recs == 0)
+                return "";
+
+            return votacion.id.ToString();
         }
     }
 }

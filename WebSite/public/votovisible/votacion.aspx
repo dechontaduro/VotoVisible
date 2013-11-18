@@ -22,7 +22,7 @@
         </asp:Repeater>
             {'decision':'Total', 'publicos':0, 'privados':0,'total':0}];
 
-            //delete resultados[resultados.length - 1];
+            resultados.splice(resultados.length - 1, 1);
           }
     </script>
   </head>
@@ -40,13 +40,8 @@
           </p>
           <div class="jumbotron">
             <h1>VotoVisible.org</h1>
-            <h2>Infograf&iacute;a <%# ( votacion.corporacion ) %> - <%# ( votacion.titulo) %><br />
+            <h2><%# ( votacion.corporacion ) %> - <%# ( votacion.titulo) %><br />
                 <small><%# ( votacion.numero) %>-<%# ( votacion.anio ) %> (<%# ( votacion.finalizado ) %>)</small> </h2>
-                <ul>
-                    <li>galería con las imágenes que contenganlos tweets</li>
-                    <li>mapa de los tweets</li>
-                    <li>persona con mayor cantidad de tweets</li>
-                </ul>
           </div>
             <div class="row">
                 <div class="col-6 col-sm-6 col-lg-4">

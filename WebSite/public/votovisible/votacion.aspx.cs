@@ -18,7 +18,7 @@ public partial class public_votovisible_votacion : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            if (log.IsErrorEnabled) log.Error(String.Format("", votacionId), ex);
+            if (log.IsErrorEnabled) log.Error(String.Format("VotaId:", votacionId), ex);
         }
     }
 
@@ -35,6 +35,9 @@ public partial class public_votovisible_votacion : System.Web.UI.Page
     protected string getVotacionIdRequest()
     {
         string reqId = Request["id"];
+
+        if (log.IsInfoEnabled) log.InfoFormat("VotaId:", reqId);
+        
         long lid = com.VotoVisible.Utils.Conversion.Base36Decode(reqId);
         string id = lid.ToString();
         return id;

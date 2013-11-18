@@ -202,6 +202,26 @@ namespace com.VotoVisible.Manager
 
         /// <summary>
         /// Método: GetDBParameter
+        /// Descripción: Retorna un parámetro con tipo de dato byte[], si es nulo, con valor DBNull.
+        /// </summary>
+        // Fecha: 14 de abril de 2008
+        // Autor: Juan Carlos González Cardona
+        public DbParameter GetDBParameter(string name, byte[] value)
+        {
+            DbParameter par;
+            par = dpf.CreateParameter();
+            par.ParameterName = name;
+
+            if (value != null)
+                par.Value = value;
+            else
+                par.Value = DBNull.Value;
+
+            return par;
+        }
+
+        /// <summary>
+        /// Método: GetDBParameter
         /// Descripción: Retorna un parámetro con tipo de dato long, si es nulo, con valor DBNull.
         /// </summary>
         // Fecha: 14 de abril de 2008

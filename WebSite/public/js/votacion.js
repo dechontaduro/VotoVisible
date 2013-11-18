@@ -1,4 +1,5 @@
 ﻿var colors = { 'Sí': 'green', 'No': 'red' };
+var personURL = '../images/man_black_256.png';
 function drawResultados() {
     //d3.select(window).on('resize', resize);
     var margin = { top: 1, left: 1, bottom: 1, right: 1 }
@@ -20,20 +21,45 @@ function drawResultados() {
 
     //groups.translate([width / 2, height / 2]);
     groups.attr('transform', function (d, i) {
-        var x = (width / 4) * (1 + i);
-        var y = (height / 4) * (1 + i);
+        var x = (width / 2) * (i);
+        var y = 0;//(height / 2) * (1 + i);
         return 'translate(' + [x, y] + ')';
     });
 
     var images = groups.append('image')
-                .attr('xlink:href', 'http://www.e-pint.com/epint.jpg')
-                /*.attr({
-                    cx: function (d, i) { return 0; },
-                    cy: function (d, i) { return 0; },
-                })*/
-                .attr('width', function (d, i) { return d.total * (radioMax / 3); })
-                .attr('height', 80);
+                .attr('xlink:href', personURL)
+                //.attr('width', function (d, i) { return d.total * (radioMax / 3); })
+                //.attr('alignment-baseline', 'top')
+                //.style('z-index', '10')
+                .attr('width', function (d, i) { return d.total * (radioMax / 1); })
+                .attr('height', function (d, i) { return d.total * (radioMax / 1); })
+
+    var label = groups.append('text')
+    .text(function (d) { return d.decision; })
+    //.attr('x', function (d, i) { return d.total * (radioMax / 1); })
+    .attr('x', 65)
+    .attr('y', 55)
+    .attr('alignment-baseline', 'top')
+    .attr('text-anchor', 'middle')
+    .style('font-size', '22px')
+    .style('fill', '#ffffff')
+
+
+    var label = groups.append('text')
+    .text(function (d) { return d.total; })
+    .attr('x', 65)
+    .attr('y', 25)
+    .attr('alignment-baseline', 'middle')
+    .attr('text-anchor', 'middle')
+    .style('font-size', '18px')
+    .style('fill', '#ffffff')
+
+
+    //.style('z-index', '500')
+    //.style('font-size', function (d) { return (2 * d.r - 8) / this.getComputedTextLength() * 50 + 'px'; });
+
     
+
     /*
     var totales = groups.append('circle')
     .attr({
@@ -47,7 +73,7 @@ function drawResultados() {
         'stroke-width': 2.4192
     });
     */
-
+    /*
     var privados = groups.append('circle')
     .attr({
         cx: function (d, i) { return 0; },
@@ -55,16 +81,10 @@ function drawResultados() {
         r: function (d, i) { return d.privados * (radioMax / 3); },
         fill: function (d, i) { return 'gray'; }
     });
-
+    */
     
 
-    var label = groups.append('text')
-    .text(function (d) { return d.decision + ':' + d.total; })
-    .attr({
-        'alignment-baseline': 'middle',
-        'text-anchor': 'middle'
-    });
-
+    
 
 
     /*

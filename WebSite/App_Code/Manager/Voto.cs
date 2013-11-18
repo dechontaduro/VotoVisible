@@ -218,8 +218,9 @@ namespace com.VotoVisible.Manager
         {
             string sql =
                 @"UPDATE voto
-                SET votaId = @votaId
-                  ,twitterAccount = @twitterAccount
+                SET 
+                  twitterAccount = @twitterAccount
+                  --,votaId = @votaId
                   ,votoTipo = @votoTipo
                   ,votoDecision = @votoDecision
                   ,votoComentario = @votoComentario
