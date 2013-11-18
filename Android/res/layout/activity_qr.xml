@@ -1,49 +1,283 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/twfondo">
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/ScrollIni"
+    android:layout_gravity="left|center_vertical"
+    android:background="@color/twfondo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/header"
-        android:layout_width="fill_parent" />
-
-    <Button
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Escanear Codigo Qr"
-        android:textSize="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/btnQr"
-        style="@style/textoEncabezado"
-        android:background="@drawable/botoningresar"
-        android:layout_gravity="center" />
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/twfondo">
 
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            android:layout_width="fill_parent" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/txtQr"
-        android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Escanear Codigo Qr"
+            android:textSize="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btnQr"
+            style="@style/textoEncabezado"
+            android:background="@drawable/botoningresar"
+            android:layout_gravity="center" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Escanear Codigo Qr"
-        android:textSize="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/btnEnviarTw"
-        style="@style/textoEncabezado"
-        android:background="@drawable/botoningresar"
-        android:layout_gravity="center" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
 
-</LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Corporacion:"
+                    android:textSize="18dp"
+                    style="@style/textoEncabezado"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_vertical" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/corp"
+                    android:text=""
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/cuadrotexto"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Proyecto:"
+                    android:textSize="18dp"
+                    style="@style/textoEncabezado"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:text=""
+                    android:id="@+id/proy"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/cuadrotexto"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Numero:"
+                    android:textSize="18dp"
+                    style="@style/textoEncabezado"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/num"
+                    android:text=""
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/cuadrotexto"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Año:"
+                    android:textSize="18dp"
+                    style="@style/textoEncabezado"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/anio"
+                    android:text=""
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/cuadrotexto"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Url Doc:"
+                    android:textSize="18dp"
+                    style="@style/textoEncabezado"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/url"
+                    android:text=""
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/cuadrotexto"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Voto"
+                    android:textSize="22dp"
+                    style="@style/textoEncabezado"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/textView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Publico"
+                    android:id="@+id/btnPublico"
+                    style="@style/textoEncabezado"
+                    android:layout_weight="1"
+                    android:background="@drawable/botonvotar"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="5dp"
+                    style="@style/textoEncabezado"
+                    android:text="Privado"
+                    android:id="@+id/btnPrivado"
+                    android:layout_weight="1"
+                    android:background="@drawable/botonvotar"/>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Abstengo"
+                    android:id="@+id/btnAbs"
+                    style="@style/textoEncabezado"
+                    android:layout_weight="1"
+                    android:background="@drawable/botonvotar"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lyVotar"
+                android:visibility="gone">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Si"
+                    android:id="@+id/btnSi"
+                    style="@style/textoEncabezado"
+                    android:layout_weight="1"
+                    android:background="@drawable/botonvotar"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="5dp"
+                    style="@style/textoEncabezado"
+                    android:text="No"
+                    android:id="@+id/btnNo"
+                    android:layout_weight="1"
+                    android:background="@drawable/botonvotar"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:id="@+id/justi"
+                android:gravity="left"
+                android:layout_below="@+id/aut"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/cuadrotexto"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:text="Votar"
+                android:textSize="20dp"
+                android:id="@+id/btnVotar"
+                style="@style/textoEncabezado"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/botoningresar"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

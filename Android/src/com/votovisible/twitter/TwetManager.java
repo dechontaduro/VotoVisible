@@ -1,11 +1,15 @@
 package com.votovisible.twitter;
 
 import twitter4j.Twitter;
+import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
+import twitter4j.User;
 import twitter4j.auth.AccessToken;
+import twitter4j.auth.Authorization;
 import twitter4j.auth.RequestToken;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
+import twitter4j.internal.http.HttpRequest;
 
 /**
  * Created by Cristian Cantillo on 6/11/13.
@@ -22,7 +26,7 @@ public class TwetManager {
 
     public TwetManager(Preferences settings){
         this.settings = settings;
-        twitter = new TwitterFactory().getInstance();
+        twitter = new TwitterFactory().getSingleton();
         twitter.setOAuthConsumer(Constantes.CONSUMER_KEY, Constantes.CONSUMER_SECRET);
 
         try{
@@ -52,17 +56,12 @@ public class TwetManager {
         String accessToken = settings.getValor(TW_ACCTOKEN);
         String accessTokenSecret = settings.getValor(TW_ACCTOKEN_SECRET);
 
-        Configuration conf = new ConfigurationBuilder()
-                .setOAuthConsumerKey(Constantes.CONSUMER_KEY)
-                .setOAuthConsumerSecret(Constantes.CONSUMER_SECRET)
-                .setOAuthAccessToken(accessToken)
-                .setOAuthAccessTokenSecret(accessTokenSecret).build();
+        ConfigurationBuilder builder = new ConfigurationBuilder();
+        builder.setOAuthConsumerKey(Constantes.CONSUMER_KEY);
+        builder.setOAuthConsumerSecret(Constantes.CONSUMER_SECRET);
 
-        try{
-            twitter = new TwitterFactory(conf).getInstance();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+        AccessToken token = new AccessToken(accessToken, accessTokenSecret);
+        twitter = new TwitterFactory(builder.build()).getInstance(token);
     }
 
     public boolean enviarTwet(String texto){

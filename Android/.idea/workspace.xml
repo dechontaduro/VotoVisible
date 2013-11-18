@@ -11,7 +11,7 @@
     </shared>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/AndroidManifest.xml" line="67" mnemonic="7" />
+    <bookmark url="file://$PROJECT_DIR$/AndroidManifest.xml" line="68" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1927e2a-c4f9-4413-b91b-ddb2123549df" name="Default" comment="" />
@@ -73,38 +73,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java" line="67" class="com.google.zxing.client.android.MenuActivity" package="com.google.zxing.client.android">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java" line="52" class="com.google.zxing.client.android.MenuActivity$2" package="com.google.zxing.client.android">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -114,31 +83,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="31" selection-start="8813" selection-end="8813" vertical-scroll-proportion="0.0" vertical-offset="3066" max-vertical-offset="3434">
-              <folding>
-                <element signature="e#2446#2464#0" expanded="true" />
-                <element signature="e#5228#5254#0" expanded="true" />
-                <element signature="e#5396#5416#0" expanded="true" />
-                <element signature="e#6325#6343#0" expanded="true" />
-                <element signature="e#6798#6818#0" expanded="true" />
-                <element signature="e#7249#7272#0" expanded="true" />
-                <element signature="e#7593#7623#0" expanded="true" />
-                <element signature="e#7939#7964#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwetManager.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TwetManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/TwetManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="5" selection-start="2329" selection-end="2329" vertical-scroll-proportion="0.5570652" vertical-offset="1070" max-vertical-offset="1632">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="48" column="14" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0" vertical-offset="579" max-vertical-offset="1462">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,69 +95,16 @@
       <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" vertical-offset="622" max-vertical-offset="1309">
-              <folding>
-                <element signature="e#1056#1500#0" expanded="true" />
-                <element signature="e#1489#1490#0" expanded="true" />
-                <element signature="e#1612#2135#0" expanded="true" />
-                <element signature="e#2124#2125#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_webtwitter.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_webtwitter.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="50" column="0" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1173">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main_Activity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/Main_Activity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="40" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="493">
-              <folding>
-                <element signature="e#616#848#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="31" selection-start="1421" selection-end="1421" vertical-scroll-proportion="-8.2" vertical-offset="492" max-vertical-offset="1122">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="splash.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="8" selection-start="875" selection-end="898" vertical-scroll-proportion="-10.12" vertical-offset="189" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_qr.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/activity_qr.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="4" selection-start="818" selection-end="1148" vertical-scroll-proportion="-0.68" vertical-offset="408" max-vertical-offset="918">
+            <state line="262" column="38" selection-start="10412" selection-end="10412" vertical-scroll-proportion="-9.84" vertical-offset="4208" max-vertical-offset="4896">
               <folding />
             </state>
           </provider>
@@ -217,14 +113,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EscanerQr.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="botoningresar.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/botoningresar.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="11" selection-start="113" selection-end="1724" vertical-scroll-proportion="0.0" vertical-offset="533" max-vertical-offset="969">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/header.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.6" vertical-offset="15" max-vertical-offset="595">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EscanerQr.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="45" selection-start="720" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="595">
+            <state line="105" column="17" selection-start="3652" selection-end="3652" vertical-scroll-proportion="0.07901908" vertical-offset="1501" max-vertical-offset="2652">
               <folding>
-                <element signature="e#608#883#0" expanded="true" />
-                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#1070#1345#0" expanded="true" />
+                <element signature="e#1334#1335#0" expanded="true" />
+                <element signature="e#1454#1733#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1842#2121#0" expanded="true" />
+                <element signature="e#2110#2111#0" expanded="true" />
+                <element signature="e#2228#2504#0" expanded="true" />
+                <element signature="e#2493#2494#0" expanded="true" />
+                <element signature="e#2598#2746#0" expanded="true" />
+                <element signature="e#2735#2736#0" expanded="true" />
+                <element signature="e#2840#2988#0" expanded="true" />
+                <element signature="e#2977#2978#0" expanded="true" />
+                <element signature="e#3091#4273#0" expanded="true" />
+                <element signature="e#4262#4263#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webTwitter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/webTwitter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="21" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constantes.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/Constantes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="1" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="391">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -240,21 +187,30 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/google/zxing/client/android/CaptureActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/res/layout/splash.xml" />
         <option value="$PROJECT_DIR$/src/com/votovisible/twitter/Preferences.java" />
         <option value="$PROJECT_DIR$/src/com/votovisible/twitter/webTwitter.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/votovisible/twitter/TwetManager.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_qr.xml" />
         <option value="$PROJECT_DIR$/src/com/google/zxing/client/android/Main_Activity.java" />
-        <option value="$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java" />
-        <option value="$PROJECT_DIR$/src/com/google/zxing/client/android/webTwitter.java" />
+        <option value="$PROJECT_DIR$/src/com/votovisible/twitter/DatosGlobales.java" />
+        <option value="$PROJECT_DIR$/res/drawable-hdpi/botonvotar.xml" />
         <option value="$PROJECT_DIR$/res/layout/menu.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/src/com/votovisible/twitter/Utilidades.java" />
+        <option value="$PROJECT_DIR$/src/com/votovisible/twitter/TestConexion.java" />
+        <option value="$PROJECT_DIR$/src/com/votovisible/twitter/TwetManager.java" />
+        <option value="$PROJECT_DIR$/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/splash.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/google/zxing/client/android/webTwitter.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_qr.xml" />
         <option value="$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -288,7 +244,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -347,41 +302,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pruebaQr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pruebaQr" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,16 +324,21 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PTwitterProject" />
     <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cristian Cantillo\AndroidStudioProjects\android\src\com\votovisible\twitter" />
       <recent name="C:\Users\Cristian Cantillo\AndroidStudioProjects\android\res\layout" />
       <recent name="C:\Users\Cristian Cantillo\AndroidStudioProjects\android\libs" />
-      <recent name="C:\Users\Cristian Cantillo\AndroidStudioProjects\android\src\com\votovisible\twitter" />
       <recent name="C:\Users\Cristian Cantillo\AndroidStudioProjects\android\res\values" />
       <recent name="C:\Users\Cristian Cantillo\AndroidStudioProjects\android\res\drawable-hdpi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cristian Cantillo\AndroidStudioProjects\android\res\drawable" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.google.zxing.client.android" />
@@ -444,6 +373,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -469,19 +411,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -523,6 +452,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
@@ -541,6 +471,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
       <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
@@ -586,27 +517,55 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242424" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39795917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32312927" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15075758" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24848485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24848485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3225256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242424" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935154" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15075758" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USERS">
@@ -625,6 +584,255 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_webtwitter.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/Main_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="40" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="31" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="875" selection-end="898" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_qr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="4" selection-start="818" selection-end="1148" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="56" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="612">
+          <folding>
+            <element signature="e#1070#1345#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1454#1733#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1842#2121#0" expanded="true" />
+            <element signature="e#2110#2111#0" expanded="true" />
+            <element signature="e#2228#2504#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2598#2746#0" expanded="true" />
+            <element signature="e#2735#2736#0" expanded="true" />
+            <element signature="e#2840#2988#0" expanded="true" />
+            <element signature="e#2977#2978#0" expanded="true" />
+            <element signature="e#3091#4273#0" expanded="true" />
+            <element signature="e#4262#4263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="31" selection-start="8813" selection-end="8813" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/TwetManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="5" selection-start="2329" selection-end="2329" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_webtwitter.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/Main_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="40" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="31" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="875" selection-end="898" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_qr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="4" selection-start="818" selection-end="1148" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="45" selection-start="720" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="680">
+          <folding>
+            <element signature="e#1070#1345#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1454#1733#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1842#2121#0" expanded="true" />
+            <element signature="e#2110#2111#0" expanded="true" />
+            <element signature="e#2228#2504#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2598#2746#0" expanded="true" />
+            <element signature="e#2735#2736#0" expanded="true" />
+            <element signature="e#2840#2988#0" expanded="true" />
+            <element signature="e#2977#2978#0" expanded="true" />
+            <element signature="e#3091#4273#0" expanded="true" />
+            <element signature="e#4262#4263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="31" selection-start="8813" selection-end="8813" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/TwetManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="5" selection-start="2329" selection-end="2329" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" vertical-offset="935" max-vertical-offset="1513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_webtwitter.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/Main_Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="40" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="31" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="875" selection-end="898" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_qr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="4" selection-start="818" selection-end="1148" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="45" selection-start="720" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="680">
+          <folding>
+            <element signature="e#1070#1345#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1454#1733#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1842#2121#0" expanded="true" />
+            <element signature="e#2110#2111#0" expanded="true" />
+            <element signature="e#2228#2504#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2598#2746#0" expanded="true" />
+            <element signature="e#2735#2736#0" expanded="true" />
+            <element signature="e#2840#2988#0" expanded="true" />
+            <element signature="e#2977#2978#0" expanded="true" />
+            <element signature="e#3091#4273#0" expanded="true" />
+            <element signature="e#4262#4263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/help.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="4" selection-start="1467" selection-end="1467" vertical-scroll-proportion="2.009091" vertical-offset="0" max-vertical-offset="1020">
@@ -635,21 +843,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="875" selection-end="898" vertical-scroll-proportion="-10.12" vertical-offset="189" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/Intents.java">
@@ -666,56 +862,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/Preferences.java">
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/DecodeThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.36956522" vertical-offset="0" max-vertical-offset="986">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/Constantes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="99" selection-end="99" vertical-scroll-proportion="0.23097827" vertical-offset="0" max-vertical-offset="391">
+        <state line="38" column="12" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.33152175" vertical-offset="65" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/Preferences.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="31" selection-start="8813" selection-end="8813" vertical-scroll-proportion="0.0" vertical-offset="3066" max-vertical-offset="3434">
-          <folding>
-            <element signature="e#2446#2464#0" expanded="true" />
-            <element signature="e#5228#5254#0" expanded="true" />
-            <element signature="e#5396#5416#0" expanded="true" />
-            <element signature="e#6325#6343#0" expanded="true" />
-            <element signature="e#6798#6818#0" expanded="true" />
-            <element signature="e#7249#7272#0" expanded="true" />
-            <element signature="e#7593#7623#0" expanded="true" />
-            <element signature="e#7939#7964#0" expanded="true" />
-          </folding>
+        <state line="8" column="13" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/header.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="45" selection-start="720" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="595">
-          <folding>
-            <element signature="e#608#883#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_qr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="4" selection-start="818" selection-end="1148" vertical-scroll-proportion="-0.68" vertical-offset="408" max-vertical-offset="918">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.6" vertical-offset="15" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/botonvotar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="39" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_webtwitter.xml">
@@ -731,16 +906,51 @@
     <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/Main_Activity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="40" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/ids.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.1603261" vertical-offset="59" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="27" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/Constantes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="1" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/DatosGlobales.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="595">
           <folding>
-            <element signature="e#616#848#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="false" />
+            <element signature="e#591#592#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/botoningresar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="11" selection-start="113" selection-end="1724" vertical-scroll-proportion="0.0" vertical-offset="533" max-vertical-offset="969">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="31" selection-start="1421" selection-end="1421" vertical-scroll-proportion="-8.2" vertical-offset="492" max-vertical-offset="1122">
+        <state line="16" column="4" selection-start="521" selection-end="521" vertical-scroll-proportion="-0.96" vertical-offset="248" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
@@ -748,32 +958,100 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/webTwitter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/wifi/WifiConfigManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.61413044" vertical-offset="233" max-vertical-offset="714">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="29" column="19" selection-start="887" selection-end="887" vertical-scroll-proportion="-0.5531335" vertical-offset="373" max-vertical-offset="3417">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/TestConexion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0" vertical-offset="622" max-vertical-offset="1309">
-          <folding>
-            <element signature="e#1056#1500#0" expanded="true" />
-            <element signature="e#1489#1490#0" expanded="true" />
-            <element signature="e#1612#2135#0" expanded="true" />
-            <element signature="e#2124#2125#0" expanded="true" />
-          </folding>
+        <state line="15" column="19" selection-start="363" selection-end="363" vertical-scroll-proportion="0.33214286" vertical-offset="18" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-es/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="38" selection-start="668" selection-end="668" vertical-scroll-proportion="0.5283364" vertical-offset="0" max-vertical-offset="2448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="42" selection-start="951" selection-end="951" vertical-scroll-proportion="0.49908593" vertical-offset="101" max-vertical-offset="2448">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/votovisible/twitter/TwetManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="5" selection-start="2329" selection-end="2329" vertical-scroll-proportion="0.5570652" vertical-offset="1070" max-vertical-offset="1632">
+        <state line="48" column="14" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0" vertical-offset="579" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/splash.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="39" selection-start="228" selection-end="228" vertical-scroll-proportion="0.20668693" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="2" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.6294278" vertical-offset="296" max-vertical-offset="3451">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/webTwitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="21" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_qr.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="262" column="38" selection-start="10412" selection-end="10412" vertical-scroll-proportion="-9.84" vertical-offset="4208" max-vertical-offset="4896">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="0" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/google/zxing/client/android/EscanerQr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="17" selection-start="3652" selection-end="3652" vertical-scroll-proportion="0.07901908" vertical-offset="1501" max-vertical-offset="2652">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1070#1345#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1454#1733#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1842#2121#0" expanded="true" />
+            <element signature="e#2110#2111#0" expanded="true" />
+            <element signature="e#2228#2504#0" expanded="true" />
+            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="e#2598#2746#0" expanded="true" />
+            <element signature="e#2735#2736#0" expanded="true" />
+            <element signature="e#2840#2988#0" expanded="true" />
+            <element signature="e#2977#2978#0" expanded="true" />
+            <element signature="e#3091#4273#0" expanded="true" />
+            <element signature="e#4262#4263#0" expanded="true" />
           </folding>
         </state>
       </provider>

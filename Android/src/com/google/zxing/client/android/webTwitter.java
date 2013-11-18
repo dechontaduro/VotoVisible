@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.votovisible.twitter.Constantes;
 
@@ -34,6 +35,11 @@ public class webTwitter extends Activity {
                 return false;
             }
         });
-        webView.loadUrl(url);
+        try{
+            webView.loadUrl(url);
+        }catch (Exception e){
+            Toast.makeText(this, "No Se pudo Conectar con Twitter", Toast.LENGTH_LONG).show();
+            finish();
+        }
     }
 }
