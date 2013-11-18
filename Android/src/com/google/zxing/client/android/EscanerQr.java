@@ -126,6 +126,7 @@ public class EscanerQr extends Activity {
         if (resultCode == RESULT_OK) {
             String resultado = intent.getStringExtra("SCAN_RESULT");
             ponerDatosQr(resultado);
+            
         }
     }
 
