@@ -17,7 +17,7 @@ public class Main_Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
-        Button btnIngresar = (Button)findViewById(R.id.btnIngresar);
+        Button btnIngresar = (Button)findViewById(R.id.btnVotar);
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

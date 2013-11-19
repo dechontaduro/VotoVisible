@@ -7,13 +7,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.Wsdl2Code.WebServices.voto.Client;
 import com.votovisible.twitter.DatosGlobales;
 import com.votovisible.twitter.TwetManager;
+import com.votovisible.twitter.VotoTweet;
 
 import java.io.LineNumberReader;
 
@@ -34,42 +38,33 @@ public class EscanerQr extends Activity {
         c = this;
         twet = DatosGlobales.getInstance().getTwitter();
 
+        LinearLayout lyForm = (LinearLayout)findViewById(R.id.lyForm);
+        lyForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hideSoftKeyboard();
+            }
+        });
+
         Button btnEscaner = (Button)findViewById(R.id.btnQr);
         btnEscaner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(EscanerQr.this, com.google.zxing.client.android.CaptureActivity.class);
+                i.putExtra("Escanear", "Si");
                 startActivityForResult(i, 0);
             }
         });
 
-        Button btnPublico = (Button)findViewById(R.id.btnPublico);
-        btnPublico.setOnClickListener(new View.OnClickListener() {
+        RadioGroup opciones = (RadioGroup)findViewById(R.id.opciones);
+        opciones.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                tipo = 1;
-                LinearLayout lyVotar = (LinearLayout)findViewById(R.id.lyVotar);
-                lyVotar.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Button btnPrivado = (Button)findViewById(R.id.btnPrivado);
-        btnPrivado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tipo = 2;
-                LinearLayout lyVotar = (LinearLayout)findViewById(R.id.lyVotar);
-                lyVotar.setVisibility(View.VISIBLE);
-            }
-        });
-
-        Button btnAbstengo = (Button)findViewById(R.id.btnAbs);
-        btnAbstengo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tipo = 3;
-                LinearLayout lyVotar = (LinearLayout)findViewById(R.id.lyVotar);
-                lyVotar.setVisibility(View.GONE);
+            public void onCheckedChanged(RadioGroup radioGroup, int checkId) {
+                if(checkId == R.id.opc_publico){
+                    tipo = 1;
+                }else{
+                    tipo = 2;
+                }
             }
         });
 
@@ -89,6 +84,14 @@ public class EscanerQr extends Activity {
             }
         });
 
+        Button btnAbstengo = (Button)findViewById(R.id.btnAbstengo);
+        btnAbstengo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                voto ="Abstengo";
+            }
+        });
+
         Button btnVotar = (Button)findViewById(R.id.btnVotar);
         btnVotar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,12 +99,10 @@ public class EscanerQr extends Activity {
                 if(tipo == 0){
                     Toast.makeText(c, "Debe Seleccionar Una Opcion Para Votar", Toast.LENGTH_LONG).show();
                     return;
-                }else if(tipo == 3){
-                    voto = "Abstengo";
                 }
 
-                if(tipo > 0 && tipo < 3 && voto.equals("")){
-                    Toast.makeText(c, "Seleccione Si o No para Votar", Toast.LENGTH_LONG).show();
+                if(voto.equals("")){
+                    Toast.makeText(c, "Seleccione Si, No o Abstengo para Votar", Toast.LENGTH_LONG).show();
                     return;
                 }
 
@@ -112,6 +113,9 @@ public class EscanerQr extends Activity {
                 }
 
                 String mensaje = getMensaje();
+
+                sendVotoWS();
+
                 if(twet.enviarTwet(mensaje)){
                     Toast.makeText(c, "Tweet Enviado Correctamente", Toast.LENGTH_LONG).show();
                 }else{
@@ -126,7 +130,6 @@ public class EscanerQr extends Activity {
         if (resultCode == RESULT_OK) {
             String resultado = intent.getStringExtra("SCAN_RESULT");
             ponerDatosQr(resultado);
-            
         }
     }
 
@@ -137,10 +140,11 @@ public class EscanerQr extends Activity {
         EditText anio = (EditText)findViewById(R.id.anio);
         EditText url = (EditText)findViewById(R.id.url);
         EditText just = (EditText)findViewById(R.id.justi);
+        String votacion = (tipo == 1)?voto:"Privado";
 
-        String mensaje = "" + proy.getText().toString() + " #" + corp.getText().toString() + " #pl"
+        String mensaje = "" + proy.getText().toString() + " #" + corp.getText().toString() + " #"
                 + num.getText().toString() + "_" + anio.getText().toString() + " " + url.getText().toString().replace("$", "&")
-                + " #" + voto + " " + just.getText().toString();
+                + " #" + votacion + " " + just.getText().toString();
 
         return mensaje;
     }
@@ -164,4 +168,43 @@ public class EscanerQr extends Activity {
             e.printStackTrace();
         }
     }
+
+
+    private void hideSoftKeyboard() {
+        InputMethodManager inputManager = (InputMethodManager) getBaseContext()
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (inputManager != null)
+            inputManager.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+    }
+
+    private void sendVotoWS() {
+        String justificacion = ((EditText)findViewById(R.id.justi)).getText().toString();
+
+        VotoTweet votoTweet = new VotoTweet("", "10", "dechontaduro", "0",  voto, justificacion, "123456", "", "", "", "", "");
+
+        Client client = new Client();
+        client.setVotoTweet(votoTweet);
+        client.setOnResultListener(asynResult);
+        client.execute();
+    }
+
+    Client.OnAsyncResult asynResult = new Client.OnAsyncResult() {
+        @Override
+        public void onResultSuccess(final int resultCode, final String message) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+
+        @Override
+        public void onResultFail(final int resultCode, final String message) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+    };
 }

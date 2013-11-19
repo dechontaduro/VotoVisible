@@ -5,8 +5,13 @@ public partial class public_votovisible_votacionnueva : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (IsPostBack)
+        {
+            System.Web.UI.ClientScriptManager cs = Page.ClientScript;
+            cs.RegisterStartupScript(this.GetType(), "QR", "genQR();", true);
+        }
     }
+
     protected void btnQR_Click(object sender, EventArgs e)
     {
         com.VotoVisible.Entitity.Votacion votacion = new com.VotoVisible.Entitity.Votacion();

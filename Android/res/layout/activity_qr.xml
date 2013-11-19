@@ -10,12 +10,13 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="@color/twfondo">
+        android:background="@color/twfondo"
+        android:id="@+id/lyForm">
 
         <include
             android:id="@+id/header"
             layout="@layout/header"
-            android:layout_width="fill_parent" />
+            android:layout_width="fill_parent"/>
 
         <Button
             android:layout_width="fill_parent"
@@ -27,6 +28,8 @@
             android:layout_marginLeft="20dp"
             android:id="@+id/btnQr"
             style="@style/textoEncabezado"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
             android:background="@drawable/botoningresar"
             android:layout_gravity="center" />
 
@@ -181,7 +184,8 @@
                     style="@style/textoEncabezado"
                     android:gravity="center"
                     android:layout_gravity="center_vertical"
-                    android:id="@+id/textView" />
+                    android:id="@+id/textView"
+                    android:focusable="true"/>
 
             </LinearLayout>
 
@@ -191,46 +195,36 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Publico"
-                    android:id="@+id/btnPublico"
-                    style="@style/textoEncabezado"
-                    android:layout_weight="1"
-                    android:background="@drawable/botonvotar"/>
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/opciones"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="5dp"
-                    style="@style/textoEncabezado"
-                    android:text="Privado"
-                    android:id="@+id/btnPrivado"
-                    android:layout_weight="1"
-                    android:background="@drawable/botonvotar"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Publico"
+                        style="@style/textoEncabezado"
+                        android:layout_weight="1"
+                        android:id="@+id/opc_publico" />
 
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Abstengo"
-                    android:id="@+id/btnAbs"
-                    style="@style/textoEncabezado"
-                    android:layout_weight="1"
-                    android:background="@drawable/botonvotar"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Privado"
+                        style="@style/textoEncabezado"
+                        android:layout_weight="1"
+                        android:id="@+id/opc_privado" />
+
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lyVotar"
-                android:visibility="gone">
+                android:id="@+id/lyVotar">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -251,6 +245,17 @@
                     style="@style/textoEncabezado"
                     android:text="No"
                     android:id="@+id/btnNo"
+                    android:layout_weight="1"
+                    android:background="@drawable/botonvotar"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="5dp"
+                    style="@style/textoEncabezado"
+                    android:text="Abstengo"
+                    android:id="@+id/btnAbstengo"
                     android:layout_weight="1"
                     android:background="@drawable/botonvotar"/>
 

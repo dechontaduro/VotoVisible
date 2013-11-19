@@ -30,14 +30,13 @@ public class MenuActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu);
+        setContentView(R.layout.splash);
         con = new TestConexion();
 
         c = this;
 
         if(!con.tieneConectividad(c)){
             Toast.makeText(c, "No Tiene Conexion a Internet", Toast.LENGTH_LONG).show();
-            return;
         }
 
         Button btnVotar = (Button)findViewById(R.id.btnVotar);
@@ -61,6 +60,15 @@ public class MenuActivity extends Activity {
                     i.putExtra("URL",twet.getUrlAutenticacion());
                     startActivityForResult(i, AUT_TWITTER);
                 }
+            }
+        });
+
+        Button btnVotaciones = (Button)findViewById(R.id.btnVotaciones);
+        btnVotaciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuActivity.this, activity_votaciones.class);
+                startActivity(i);
             }
         });
     }

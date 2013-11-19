@@ -32,6 +32,7 @@ public class voto : System.Web.Services.WebService {
             voto = new com.VotoVisible.Entitity.Voto();
             voto.votacionId = ivotacionId;
             voto.twitterAccount = tweeterAccount;
+            voto.creado = DateTime.Today;
         }
 
         voto.tweetId = tweedId;

@@ -1,33 +1,45 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/blanco">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/header"
-        android:layout_width="fill_parent" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/splash"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center"
-        android:src="@drawable/logo" />
-
-    <Button
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="Ingresar"
-        android:textSize="20dp"
-        android:id="@+id/btnIngresar"
-        style="@style/textoEncabezado"
-        android:background="@drawable/botoningresar"
-        android:layout_gravity="center" />
+        android:layout_height="fill_parent"
+        android:id="@+id/ScrollIni"
+        android:layout_gravity="left|center_vertical"
+        android:background="@color/blanco">
 
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/blanco"
+        android:layout_marginBottom="50dp">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/header"
+            android:layout_width="fill_parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/splash"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+
+    </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <include
+            layout="@layout/footer"
+            android:layout_width="fill_parent" />
+
+    </LinearLayout>
+</RelativeLayout>

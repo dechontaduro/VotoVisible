@@ -24,11 +24,6 @@
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.VIBRATE"/>
   <uses-permission android:name="android.permission.FLASHLIGHT"/>
-  <uses-permission android:name="android.permission.READ_CONTACTS"/>
-  <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
   <uses-sdk android:minSdkVersion="7"
@@ -50,15 +45,6 @@
 
   <application android:icon="@drawable/launcher_icon"
                android:label="@string/app_name">
-
-      <activity
-          android:name=".Main_Activity"
-          android:label="Voto Visible">
-          <intent-filter>
-              <action android:name="android.intent.action.MAIN" />
-              <category android:name="android.intent.category.LAUNCHER" />
-          </intent-filter>
-      </activity>
 
         <activity android:name="com.google.zxing.client.android.CaptureActivity"
             android:screenOrientation="landscape"
@@ -182,6 +168,10 @@
       </intent-filter>
     </activity>
       <activity
+          android:name=".Main_Activity"
+          android:label="Menu" />
+
+      <activity
           android:name=".MenuActivity"
           android:label="Menu" />
 
@@ -192,6 +182,9 @@
       <activity
           android:name=".EscanerQr"
           android:label="Qr" />
+      <activity
+          android:name=".activity_votaciones"
+          android:label="votaciones" />
   </application>
 
 </manifest>

@@ -34,7 +34,7 @@
                             P&uacute;blica:<asp:CheckBox ID="publica" Checked="true" runat="server" /><br />
                             Votantes:<asp:TextBox ID="votantes" Text="dechontaduro,votovisible" runat="server"></asp:TextBox><br />
                             Id:<asp:TextBox ID="votid" Text="" runat="server"></asp:TextBox>
-                            <asp:LinkButton ID="btnQR" CssClass="btn btn-lg btn-info" OnClientClick="genQR();" runat="server" OnClick="btnQR_Click">Generar QR&raquo;</asp:LinkButton>
+                            <asp:LinkButton ID="btnQR" CssClass="btn btn-lg btn-info" runat="server" OnClick="btnQR_Click">Generar QR&raquo;</asp:LinkButton>
                         </div>
                         <!--/span-->
                         <div class="col-6 col-sm-6 col-lg-4">
