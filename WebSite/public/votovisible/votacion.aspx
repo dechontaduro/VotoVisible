@@ -86,8 +86,8 @@
                     </ItemTemplate>
               </asp:Repeater>
 
-              <h2>Timeline</h2>
-			    <a class="twitter-timeline" href="https://twitter.com/search?q=%23v_v<%# ( com.VotoVisible.Utils.Conversion.Base36Encode((ulong)votacion.id)) %>" data-widget-id="399367535344107520">Tweets sobre "#v_v"</a>
+              <!-- #include file ="segmentos/tlVo_aV.html" -->
+			    
           </div>
       </div><!--/row-->
 
