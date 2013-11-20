@@ -142,9 +142,16 @@ public class EscanerQr extends Activity {
         EditText just = (EditText)findViewById(R.id.justi);
         String votacion = (tipo == 1)?voto:"Privado";
 
-        String mensaje = "" + proy.getText().toString() + " #" + corp.getText().toString() + " #"
-                + num.getText().toString() + "_" + anio.getText().toString() + " " + url.getText().toString().replace("$", "&")
-                + " #" + votacion + " " + just.getText().toString();
+        String mensaje =
+                this.getString(R.string.tweet
+                    , corp.getText().toString()
+                    , proy.getText().toString()
+                    , num.getText().toString()
+                    , anio.getText().toString()
+                    , url.getText().toString().replace("$", "&")
+                    , votacion
+                    ,just.getText().toString()
+                    );
 
         return mensaje;
     }

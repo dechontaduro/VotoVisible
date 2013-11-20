@@ -28,7 +28,7 @@ import org.ksoap2.serialization.MarshalFloat;
 public class voto {
     
     public String NAMESPACE ="http://tempuri.org/";
-    public String url="http://192.168.0.14/ws/voto.asmx";
+    public String url="http://54.200.143.226/votovisible/ws/voto.asmx";
     public int timeOut = 60000;
     public IWsdl2CodeEvents eventHandler;
     public SoapProtocolVersion soapVersion;
