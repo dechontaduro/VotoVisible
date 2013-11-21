@@ -17,6 +17,7 @@ namespace com.VotoVisible.Entitity
         public string tweet;
         public int? retweets;
         public int? replies;
+        public int? favorites;
         public DateTime? creado;
         public DateTime? realizado;
 
@@ -31,6 +32,7 @@ namespace com.VotoVisible.Entitity
                     string tweet,
                     int? retweets,
                     int? replies,
+                    int? favorites,
                     DateTime? creado,
                     DateTime? realizado)
         {
@@ -44,9 +46,9 @@ namespace com.VotoVisible.Entitity
             this.tweet = tweet;
             this.retweets = retweets;
             this.replies = replies;
+            this.favorites = favorites;
             this.creado = creado;
             this.realizado = realizado;
-            
         }
     }
 }

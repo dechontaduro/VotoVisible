@@ -58,7 +58,7 @@ namespace com.VotoVisible.Manager
 	                , twitterAccount, tweetId
 	                , votaCreado, votaFinalizado
                 FROM votacion
-                ORDER BY votaCreado";
+                ORDER BY votaCreado DESC";
 
             GenericProvider gp = new GenericProvider("default");
             DataTable dt = gp.GetTable(sql, CommandType.Text, gp.GetDBParameter("@top", records));

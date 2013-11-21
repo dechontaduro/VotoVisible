@@ -33,7 +33,7 @@ namespace com.VotoVisible.Twitter
         #endregion
 
         // Track Keywords
-        private static void StreamFilterBasicTrackExample(IToken token, string hashtag)
+        private static void StreamFilterBasicTrack(IToken token, string hashtag)
         {
             IFilteredStream stream = new FilteredStream();
 
@@ -72,7 +72,7 @@ namespace com.VotoVisible.Twitter
 
             TokenSingleton.Token = token;
             //GetRateLimit(token);
-            StreamFilterBasicTrackExample(token, "#Vo_aV");
+            StreamFilterBasicTrack(token, "#Vo_aV");
         }
 
     }

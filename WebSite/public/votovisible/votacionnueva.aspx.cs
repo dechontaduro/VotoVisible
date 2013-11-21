@@ -29,11 +29,11 @@ public partial class public_votovisible_votacionnueva : System.Web.UI.Page
         if (id == "")
         {
             id = com.VotoVisible.Manager.Votacion.add(votacion);
-            votid.Text = id;
+            votid.Text = com.VotoVisible.Utils.Conversion.Base36Encode(ulong.Parse(id));
         }
         else
         {
-            votacion.id = int.Parse(id);
+            votacion.id = (int)com.VotoVisible.Utils.Conversion.Base36Decode(id);
             id = com.VotoVisible.Manager.Votacion.update(votacion);
         }
 

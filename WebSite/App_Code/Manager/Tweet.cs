@@ -19,9 +19,9 @@ namespace com.VotoVisible.Manager
         {
             string sql =
                 @"INSERT INTO tweet
-                    (twAccount,twTweetId,twText,twRetweets,twReplies,twCreated,twStatus,twHashtags,twTweet)
+                    (twAccount,twTweetId,twText,twRetweets,twReplies,twFavorites,twCreated,twStatus,twHashtags,twTweet)
                 VALUES
-                    (@twAccount,@twTweetId,@twText,@twRetweets,@twReplies,@twCreated,@twStatus,@twHashtags,@twTweet)
+                    (@twAccount,@twTweetId,@twText,@twRetweets,@twReplies,@twFavorites,@twCreated,@twStatus,@twHashtags,@twTweet)
 
                 SELECT @@IDENTITY";
 
@@ -32,6 +32,7 @@ namespace com.VotoVisible.Manager
                                 , gp.GetDBParameter("@twText", tweet.Text)
                                 , gp.GetDBParameter("@twRetweets", tweet.RetweetCount)
                                 , gp.GetDBParameter("@twReplies", 0)
+                                , gp.GetDBParameter("@twFavorites", 0)
                                 , gp.GetDBParameter("@twCreated", tweet.CreatedAt)
                                 , gp.GetDBParameter("@twStatus", 0)
                                 , gp.GetDBParameter("@twHashtags", getHashtagString(tweet.Hashtags))

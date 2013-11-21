@@ -68,14 +68,7 @@
                 </ItemTemplate>
               </asp:Repeater>
           </div>
-          <div>
-			<ul>
-			<li>TIMELINE DE Tweets</li>
-            <li>Tweets</li>
-			<li>Tweets</li>
-			<li>Tweets</li>
-			</ul>
-          </div>
+          <!-- #include file ="segmentos/tlVo_aV.html" -->
         </div><!--/span-->
       </div><!--/row-->
 

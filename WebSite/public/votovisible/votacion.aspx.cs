@@ -25,7 +25,7 @@ public partial class public_votovisible_votacion : System.Web.UI.Page
     protected com.VotoVisible.Entitity.Votacion bindVotacion(string votacionId)
     {
         com.VotoVisible.Entitity.Votacion obj = com.VotoVisible.Manager.Votacion.getById(votacionId);
-        obj.votos = com.VotoVisible.Manager.Voto.getByVotacion(votacionId);
+        obj.votos = com.VotoVisible.Manager.Voto.getRealizadosByVotacion(votacionId);
         obj.mostReply = com.VotoVisible.Manager.Voto.getMostReplyByVotacion(votacionId);
         obj.mostRetweet = com.VotoVisible.Manager.Voto.getMostRetweetByVotacion(votacionId);
         obj.totales = com.VotoVisible.Manager.Voto.getTotalesByVotacion(votacionId);
