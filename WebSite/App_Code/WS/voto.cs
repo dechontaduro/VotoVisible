@@ -24,7 +24,8 @@ public class voto : System.Web.Services.WebService {
         com.VotoVisible.Entitity.Voto voto;
         int ivotacionId = (int)com.VotoVisible.Utils.Conversion.Base36Decode(votacionId);
         //TODO: verificar que el voto esté de acuerdo con el tipo de votación
-        List<com.VotoVisible.Entitity.Voto> busqueda = com.VotoVisible.Manager.Voto.search(tweeterAccount, ivotacionId.ToString(), null, null, null);
+        List<com.VotoVisible.Entitity.Voto> busqueda = 
+            com.VotoVisible.Manager.Voto.search(tweeterAccount, ivotacionId.ToString(), "", "", "", "");
         if (busqueda.Count == 1)
             voto = busqueda[0];
         else

@@ -28,6 +28,7 @@ namespace com.VotoVisible.Manager
                 Conversion.Obj2String(voto["tweet"]),
                 Conversion.Obj2Int(voto["retweets"]),
                 Conversion.Obj2Int(voto["replies"]),
+                Conversion.Obj2Int(voto["favorites"]),
                 Conversion.Obj2DateTime(voto["votoCreado"]),
                 Conversion.Obj2DateTime(voto["votoRealizado"]));
             return obj;
@@ -46,7 +47,7 @@ namespace com.VotoVisible.Manager
         {
             string sql =
                 @"SELECT votoId, votaId, twitterAccount, votoTipo, votoDecision, votoComentario
-	                , tweetId, tweet, retweets, replies
+	                , tweetId, tweet, retweets, replies, favorites
 	                , votoCreado, votoRealizado
                 FROM voto
                 WHERE votoId = @id";
@@ -65,7 +66,7 @@ namespace com.VotoVisible.Manager
         {
             string sql =
                 @"SELECT votoId, votaId, twitterAccount, votoTipo, votoDecision, votoComentario
-	                , tweetId, tweet, retweets, replies
+	                , tweetId, tweet, retweets, replies, favorites
 	                , votoCreado, votoRealizado
                 FROM voto
                 WHERE votaId = @votacionId
@@ -85,11 +86,35 @@ namespace com.VotoVisible.Manager
             return lst;
         }
 
+        public static List<Entitity.Voto> getRealizadosByVotacion(string votacionId)
+        {
+            string sql =
+                @"SELECT votoId, votaId, twitterAccount, votoTipo, votoDecision, votoComentario
+	                , tweetId, tweet, retweets, replies, favorites
+	                , votoCreado, votoRealizado
+                FROM voto
+                WHERE votaId = @votacionId AND votoRealizado IS NOT NULL
+                ORDER BY votoRealizado";
+
+            GenericProvider gp = new GenericProvider("default");
+            DataTable dt = gp.GetTable(sql, CommandType.Text, gp.GetDBParameter("@votacionId", votacionId));
+
+            List<Entitity.Voto> lst = new List<Entitity.Voto>();
+
+            if (dt == null || dt.Rows.Count == 0)
+                return lst;
+
+            foreach (DataRow dr in dt.Rows)
+                lst.Add(convert2Voto(dr));
+
+            return lst;
+        }
+
         public static Entitity.Voto getMostRetweetByVotacion(string votacionId)
         {
             string sql =
                 @"SELECT TOP 1 votoId, votaId, twitterAccount, votoTipo, votoDecision, votoComentario
-	                , tweetId, tweet, retweets, replies
+	                , tweetId, tweet, retweets, replies, favorites
 	                , votoCreado, votoRealizado
                 FROM voto
                 WHERE votaId = @votacionId AND tweetId IS NOT NULL
@@ -109,7 +134,7 @@ namespace com.VotoVisible.Manager
         {
             string sql =
                 @"SELECT TOP 1 votoId, votaId, twitterAccount, votoTipo, votoDecision, votoComentario
-	                , tweetId, tweet, retweets, replies
+	                , tweetId, tweet, retweets, replies, favorites
 	                , votoCreado, votoRealizado
                 FROM voto
                 WHERE votaId = @votacionId AND tweetId IS NOT NULL
@@ -129,7 +154,7 @@ namespace com.VotoVisible.Manager
         {
             string sql =
                 @"SELECT TOP 1 votoId, votaId, twitterAccount, votoTipo, votoDecision, votoComentario
-	                , tweetId, tweet, retweets, replies
+	                , tweetId, tweet, retweets, replies, favorites
 	                , votoCreado, votoRealizado
                 FROM voto
                 WHERE tweetId IS NOT NULL
@@ -187,10 +212,10 @@ namespace com.VotoVisible.Manager
             string sql =
                 @"INSERT INTO voto
                 (votaId,twitterAccount,votoTipo,votoDecision,votoComentario
-                    ,tweetId,tweet,retweets,replies,votoCreado,votoRealizado)
+                    ,tweetId,tweet,retweets,replies,favorites,votoCreado,votoRealizado)
                 VALUES
                 (@votaId, @twitterAccount, @votoTipo, @votoDecision, @votoComentario
-                    , @tweetId, @tweet, @retweets, @replies, @votoCreado, @votoRealizado)
+                    , @tweetId, @tweet, @retweets, @replies, @favorites, @votoCreado, @votoRealizado)
 
                 SELECT @@IDENTITY";
 
@@ -205,6 +230,7 @@ namespace com.VotoVisible.Manager
                                 , gp.GetDBParameter("@tweet", voto.tweet)
                                 , gp.GetDBParameter("@retweets", voto.retweets)
                                 , gp.GetDBParameter("@replies", voto.replies)
+                                , gp.GetDBParameter("@favorites", voto.favorites)
                                 , gp.GetDBParameter("@votoCreado", voto.creado)
                                 , gp.GetDBParameter("@votoRealizado", voto.realizado));
 
@@ -228,6 +254,7 @@ namespace com.VotoVisible.Manager
                   ,tweet = @tweet
                   ,retweets = @retweets
                   ,replies = @replies
+                  ,favorites = @favorites
                   ,votoCreado = @votoCreado
                   ,votoRealizado = @votoRealizado
                  WHERE votoId = @votoId";
@@ -244,6 +271,7 @@ namespace com.VotoVisible.Manager
                                 , gp.GetDBParameter("@tweet", voto.tweet)
                                 , gp.GetDBParameter("@retweets", voto.retweets)
                                 , gp.GetDBParameter("@replies", voto.replies)
+                                , gp.GetDBParameter("@favorites", voto.favorites)
                                 , gp.GetDBParameter("@votoCreado", voto.creado)
                                 , gp.GetDBParameter("@votoRealizado", voto.realizado));
             if(recs != 1)
@@ -252,22 +280,37 @@ namespace com.VotoVisible.Manager
             return voto.id.ToString();
         }
 
-        public static List<Entitity.Voto> search(string twitterAccount, string votacionId
-                            , string corporacion, string numero, string anio)
+        public static List<Entitity.Voto> 
+                    search(string twitterAccount, string votacionId
+                        , string corporacion, string numero, string anio
+                        , string tweetId)
         {
             //TODO: implementar otras búsquedas
             string sql =
                 @"SELECT votoId, votaId, twitterAccount, votoTipo, votoDecision, votoComentario
-	                , tweetId, tweet, retweets, replies
+	                , tweetId, tweet, retweets, replies, favorites
 	                , votoCreado, votoRealizado
                 FROM voto
-                WHERE votaId = @votacionId AND twitterAccount = @twitterAccount
+                WHERE {0}
                 ORDER BY votoRealizado";
 
             GenericProvider gp = new GenericProvider("default");
-            DataTable dt = gp.GetTable(sql, CommandType.Text
-                , gp.GetDBParameter("@votacionId", votacionId)
-                , gp.GetDBParameter("@twitterAccount", twitterAccount));
+
+            List<System.Data.Common.DbParameter> pars = new List<System.Data.Common.DbParameter>();
+
+            if (tweetId != "")
+            {
+                sql = String.Format(sql, "tweetId = @tweetId");
+                pars.Add(gp.GetDBParameter("@tweetId", tweetId));
+            }
+            else if (twitterAccount != "" && votacionId != "")
+            {
+                sql = String.Format(sql, "votaId = @votacionId AND twitterAccount = @twitterAccount");
+                pars.Add(gp.GetDBParameter("@votacionId", votacionId));
+                pars.Add(gp.GetDBParameter("@twitterAccount", twitterAccount));
+            }
+
+            DataTable dt = gp.GetTable(sql, CommandType.Text, pars.ToArray());
 
             List<Entitity.Voto> lst = new List<Entitity.Voto>();
 

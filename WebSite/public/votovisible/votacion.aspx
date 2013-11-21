@@ -76,18 +76,9 @@
               <h2>Votos</h2>
               <asp:Repeater id="rptVotos" runat="server" DataSource="<%# votacion.votos %>">
                     <ItemTemplate>
-                        @<%# ((com.VotoVisible.Entitity.Voto)Container.DataItem).twitterAccount%>:
-                        <%# (((com.VotoVisible.Entitity.Voto)Container.DataItem).tipo == 0)?((com.VotoVisible.Entitity.Voto)Container.DataItem).decision : "Privado" %><br />
-                        (<%# ((com.VotoVisible.Entitity.Voto)Container.DataItem).realizado%>)
-                        [<%# ((com.VotoVisible.Entitity.Voto)Container.DataItem).retweets%>/
-                        <%# ((com.VotoVisible.Entitity.Voto)Container.DataItem).replies%>]<br />
-                        <%# ((com.VotoVisible.Entitity.Voto)Container.DataItem).comentario%>
                         <iframe src="http://jimwalsh.name/demos/oembed/oembed.php?id=<%# ((com.VotoVisible.Entitity.Voto)Container.DataItem).tweetId%>"></iframe>
                     </ItemTemplate>
-              </asp:Repeater>
-
-              <!-- #include file ="segmentos/tlVo_aV.html" -->
-			    
+              </asp:Repeater>			    
           </div>
       </div><!--/row-->
 

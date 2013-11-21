@@ -9,7 +9,7 @@
 
         System.Threading.Thread threadTwitterStream = new System.Threading.Thread(com.VotoVisible.Twitter.Stream.start);
         threadTwitterStream.IsBackground = true;
-        threadTwitterStream.Start();
+        threadTwitterStream.Start(); 
         Application["threadTwitterStream"] = threadTwitterStream;
     }
     
